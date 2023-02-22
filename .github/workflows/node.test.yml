@@ -8,21 +8,10 @@ jobs:
   buildtest:
     runs-on: ubuntu-latest
     steps:
-      -   uses: actions/checkout@v2.3.1
-      -   uses: actions/setup-node@v2.1.1
+      -   uses: actions/checkout
+      -   uses: actions/setup-node
           with:
               node-version: 13
-      - run: |
-
-        # disable command workflow processing
-        echo "::stop-commands::`echo -n ${{ github.token }} | sha256sum | head -c 64`"
-
-        # log untrusted output
-        echo "untrusted output"
-
-        # enable workflow command processing
-        echo "::`echo -n ${{ github.token }} | sha256sum | head -c 64`::"
-
       - run: npm ci
       - run: npm run build
       - run: npm test
