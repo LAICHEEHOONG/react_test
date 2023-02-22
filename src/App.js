@@ -3,8 +3,7 @@ import './App.css';
 
 function App() {
 
-  const a = 'a';
-  a = 'b';
+
 
   return (
     <div className="App">
