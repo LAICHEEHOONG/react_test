@@ -17,7 +17,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Deploy to heroku use CI/CD, GIT
         </a>
       </header>
     </div>
